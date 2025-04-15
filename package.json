@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "node --env-file-if-exists=.env dist/index.js",
-    "build": "tsc -p .",
+    "build": "tsc -p . && cp -r src/static dist/static && cp -r src/views dist/views",
     "dev": "nodemon --env-file=.env src/index.ts"
   },
   "keywords": [],

@@ -8,5 +8,8 @@ router.get("/", async (ctx: Context) => {
 });
 
 router.get("/about", async (ctx: Context) => {
+  ctx.state = {
+    currentTime: new Date(),
+  };
   await ctx.render("about", { title: "About" });
 });
