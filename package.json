@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "NODE_PATH=./dist node --env-file-if-exists=.env dist/index.js",
+    "start": "node --env-file-if-exists=.env dist/index.js",
     "build": "tsc -p .",
     "dev": "nodemon --env-file=.env src/index.ts"
   },
@@ -13,12 +13,16 @@
   "license": "ISC",
   "packageManager": "pnpm@10.6.4",
   "dependencies": {
+    "@ladjs/koa-views": "^9.0.0",
+    "ejs": "^3.1.10",
     "koa": "^2.16.1",
-    "koa-router": "^13.0.1"
+    "koa-router": "^13.0.1",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "@types/koa": "^2.15.0",
     "@types/koa-router": "^7.4.8",
+    "@types/koa-static": "^4.0.4",
     "@types/node": "^22.14.1",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.3",
