@@ -15,8 +15,9 @@ RUN pnpm run build
 
 FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
-COPY --from=build /app/dist /app/dist
-
+COPY --from=build /app/dist /app/dist 
+COPY --from=build /app/src/static /app/dist/static
+COPY --from=build /app/src/views /app/dist/views
 
 EXPOSE $PORT
 
