@@ -1,0 +1,16 @@
+.git/
+.idea/
+.serverless/
+.vscode/
+node_modules*/
+nodemon.json
+dockerfile
+
+/coverage*/
+/dist*/
+/lib*/
+/tmp*/
+
+.DS_Store
+npm-debug.log
+yarn-error.log
